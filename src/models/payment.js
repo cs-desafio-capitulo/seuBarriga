@@ -20,6 +20,7 @@ const PaymentSchema = new mongoose.Schema({
     type: String,
     required: true,
     enum: ['approved', 'pending', 'denied'],
+    default: 'pending',
   },
 });
 
