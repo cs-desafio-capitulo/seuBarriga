@@ -6,6 +6,7 @@
   "scripts": {
     "start": "babel-node server.js",
     "babel-debug": "nodemon --exec babel-node server.js",
+    "postest": "./node_modules/.bin/eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
