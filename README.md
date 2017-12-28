@@ -18,3 +18,8 @@ Payments method module
 * Mongoose
 * Express
 * esLint (using Airbnb pattern)
+* CI
+
+
+### Obs
+Project is automatically deployed to heroku, using CI features
