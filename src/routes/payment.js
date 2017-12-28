@@ -6,6 +6,6 @@ const router = express.Router();
 const paymentController = new PaymentController(Payment);
 
 router
-  .post('/', (req, res) => paymentController.processPayment(req, res))
+  .post('/', (req, res) => paymentController.processPayment(req, res));
 
 export default router;

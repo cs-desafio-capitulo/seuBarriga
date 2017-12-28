@@ -11,7 +11,7 @@ const PaymentSchema = new mongoose.Schema({
   },
   created_at: {
     type: Date,
-    default: Date.now
+    default: Date.now,
   },
   updated_at: {
     type: Date,
@@ -19,7 +19,7 @@ const PaymentSchema = new mongoose.Schema({
   status: {
     type: String,
     required: true,
-    enum: ['approved', 'pending', 'denied']
+    enum: ['approved', 'pending', 'denied'],
   },
 });
 
