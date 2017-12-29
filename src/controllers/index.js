@@ -9,8 +9,6 @@ export const PaymentsController = PaymentObject => ({
     } catch (err) {
       res.status(400).send(err.message);
     }
-
-    return res.json('processPayment successfuly reached');
   },
 
   async checkPaymentStatus(req, res) {
