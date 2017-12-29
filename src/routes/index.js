@@ -1,10 +1,10 @@
 import express from 'express';
-import paymentRoutes from './payment';
 
-const router = express.Router();
+import PaymentController from '../controllers';
 
-router.get('/', (req, res) => res.status(404).json({ message: 'Not found' }));
+const URL_PREFIX = '/payment';
 
-router.use('/payment', paymentRoutes);
-
-export default router;
+export default express.Router()
+  .post(`${URL_PREFIX}`, PaymentController.processPayment)
+  .get(`${URL_PREFIX}/{:id}`, PaymentController.checkPaymentStatus)
+  .all('*', PaymentController.notFound);

@@ -3,7 +3,7 @@ import env from '../config/env';
 
 mongoose.Promise = global.Promise;
 
-const databaseUrl = env.db.url;
+const databaseUrl = env.db.url || 'mongodb://localhost:27017/test';
 
 const connectToDatabase = () => mongoose.connect(databaseUrl, {
   useMongoClient: true,
